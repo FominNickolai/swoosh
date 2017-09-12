@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,10 +105,10 @@
             </objects>
             <point key="canvasLocation" x="-415" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="k1R-R5-4T0">
             <objects>
-                <viewController id="xPv-6N-XMR" sceneMemberID="viewController">
+                <viewController id="xPv-6N-XMR" customClass="LeagueVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgj-3R-Mgc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="EYR-EL-2gk"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -226,6 +226,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="xPv-6N-XMR" eventType="touchUpInside" id="TuG-Py-tIK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aio-HU-LiY">
                                 <rect key="frame" x="16" y="33.5" width="44" height="33"/>
@@ -235,7 +238,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="uUa-5U-ugI" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="CjC-Th-DID"/>
+                                    <segue destination="uUa-5U-ugI" kind="unwind" unwindAction="unwindFromLeagueVCWithUnwindSegue:" id="egU-11-s3o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,16 +262,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPm-jv-tvh"/>
                     </view>
+                    <connections>
+                        <segue destination="KvH-Lc-AhG" kind="show" identifier="skillVCSegue" id="pPj-wX-vFD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mw-Id-i0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uUa-5U-ugI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="375.19999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="308" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="ldA-DB-oU6">
             <objects>
-                <viewController id="KvH-Lc-AhG" sceneMemberID="viewController">
+                <viewController id="KvH-Lc-AhG" customClass="SkillVC" customModule="Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6zO-7Q-55s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,6 +377,9 @@
                                     <constraint firstAttribute="width" constant="29" id="rc6-JV-sba"/>
                                 </constraints>
                                 <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="3QY-id-7tO" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="t60-LY-epS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,8 +404,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yov-QS-EBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3QY-id-7tO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1117.5999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1030" y="134"/>
         </scene>
     </scenes>
     <resources>

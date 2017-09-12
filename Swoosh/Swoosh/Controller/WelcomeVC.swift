@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeVC: UIViewController {
     
     //MARK: Outlets
 
@@ -22,7 +22,11 @@ class ViewController: UIViewController {
     
     //MARK: Unwind Segue
     
-    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {}
+    @IBAction func unwindFromLeagueVC(unwindSegue: UIStoryboardSegue) {}
+    
+    deinit {
+        print("WelcomeVC deinit")
+    }
 
 }
 
