@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KvH-Lc-AhG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -73,6 +74,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="xPv-6N-XMR" kind="show" id="8VS-x9-5EW"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -223,6 +227,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aio-HU-LiY">
+                                <rect key="frame" x="16" y="33.5" width="44" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="RGS-ae-GHg"/>
+                                    <constraint firstAttribute="height" constant="33" id="ufP-L3-NnR"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="uUa-5U-ugI" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="CjC-Th-DID"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -235,15 +250,18 @@
                             <constraint firstItem="uoo-WS-DE1" firstAttribute="leading" secondItem="mPm-jv-tvh" secondAttribute="leading" constant="16" id="QHW-1n-b1e"/>
                             <constraint firstItem="uoo-WS-DE1" firstAttribute="top" secondItem="fNN-AI-S9w" secondAttribute="bottom" constant="50" id="T8h-WC-3ek"/>
                             <constraint firstItem="mPm-jv-tvh" firstAttribute="trailing" secondItem="fNN-AI-S9w" secondAttribute="trailing" constant="16" id="aso-wM-d11"/>
+                            <constraint firstItem="aio-HU-LiY" firstAttribute="leading" secondItem="bgj-3R-Mgc" secondAttribute="leadingMargin" id="chL-QU-u1D"/>
                             <constraint firstItem="s4F-Am-5hF" firstAttribute="trailing" secondItem="mPm-jv-tvh" secondAttribute="trailing" id="evL-KG-g56"/>
                             <constraint firstItem="mPm-jv-tvh" firstAttribute="trailing" secondItem="uoo-WS-DE1" secondAttribute="trailing" constant="16" id="fN8-08-7YS"/>
                             <constraint firstItem="mPm-jv-tvh" firstAttribute="trailing" secondItem="xBy-pM-lG6" secondAttribute="trailing" constant="16" id="nhh-vl-S9t"/>
                             <constraint firstItem="s4F-Am-5hF" firstAttribute="top" secondItem="bgj-3R-Mgc" secondAttribute="top" id="vKB-Uo-0Ct"/>
+                            <constraint firstItem="aio-HU-LiY" firstAttribute="centerY" secondItem="wpM-n6-KaN" secondAttribute="centerY" id="xn8-a0-SIj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPm-jv-tvh"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mw-Id-i0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="uUa-5U-ugI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="375.19999999999999" y="133.5832083958021"/>
         </scene>
