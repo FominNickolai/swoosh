@@ -16,11 +16,12 @@ class LeagueVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //MARK: Actions
+    @IBAction func onNextTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
     }
     
+     @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {}
 
     /*
     // MARK: - Navigation
@@ -31,5 +32,9 @@ class LeagueVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    deinit {
+        print("LeagueVC deinit")
+    }
 
 }

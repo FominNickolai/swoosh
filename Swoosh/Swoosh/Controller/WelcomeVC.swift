@@ -22,7 +22,11 @@ class WelcomeVC: UIViewController {
     
     //MARK: Unwind Segue
     
-    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {}
+    @IBAction func unwindFromLeagueVC(unwindSegue: UIStoryboardSegue) {}
+    
+    deinit {
+        print("WelcomeVC deinit")
+    }
 
 }
 

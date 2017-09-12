@@ -212,7 +212,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="EYR-EL-2gk"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -226,6 +226,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="xPv-6N-XMR" eventType="touchUpInside" id="TuG-Py-tIK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aio-HU-LiY">
                                 <rect key="frame" x="16" y="33.5" width="44" height="33"/>
@@ -235,7 +238,7 @@
                                 </constraints>
                                 <state key="normal" image="backButton"/>
                                 <connections>
-                                    <segue destination="uUa-5U-ugI" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="CjC-Th-DID"/>
+                                    <segue destination="uUa-5U-ugI" kind="unwind" unwindAction="unwindFromLeagueVCWithUnwindSegue:" id="egU-11-s3o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -259,6 +262,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mPm-jv-tvh"/>
                     </view>
+                    <connections>
+                        <segue destination="KvH-Lc-AhG" kind="show" identifier="skillVCSegue" id="pPj-wX-vFD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Mw-Id-i0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="uUa-5U-ugI" userLabel="Exit" sceneMemberID="exit"/>
@@ -371,6 +377,9 @@
                                     <constraint firstAttribute="width" constant="29" id="rc6-JV-sba"/>
                                 </constraints>
                                 <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="3QY-id-7tO" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="t60-LY-epS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -395,8 +404,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yov-QS-EBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3QY-id-7tO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="991" y="134"/>
+            <point key="canvasLocation" x="1030" y="134"/>
         </scene>
     </scenes>
     <resources>
